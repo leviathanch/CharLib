@@ -112,7 +112,7 @@ def run_charlib(args):
     cells = config['cells']
     characterizer = Characterizer(**settings)
     # The next line is commented out because of an issue in PySpice, but should be uncommented once that's fixed
-    # logger = Logging.setup_logging(logging_level='ERROR') # TODO: logging level should be configurable
+    logger = Logging.setup_logging(logging_level='DEBUG') # TODO: logging level should be configurable
 
     # OR settings with command line flags
     characterizer.settings.debug = characterizer.settings.debug or args.debug
